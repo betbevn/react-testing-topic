@@ -8,8 +8,6 @@ npm install --save-dev @types/jest jest ts-jest
 
 ### Init jest.config.js
 
-Technically, We do not need a jest.config.js file to run jest, but we need it to config with react-testing-library. So we leave it here
-
 Using npm:
 
 ```bash
@@ -20,6 +18,13 @@ Using yarn:
 
 ```bash
 yarn ts-jest config:init
+```
+
+### Init tsconfig.json (optional)
+
+```bash
+npm i -D typescript
+npx tsc --init
 ```
 
 # Setup react testing library
