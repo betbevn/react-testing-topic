@@ -27,7 +27,7 @@ yarn ts-jest config:init
 ### Install dependencies
 
 ```bash
-npm install --save-dev @testing-library/react @testing-library/dom @types/react @types/react-dom @testing-library/jest-dom
+npm install --save-dev @testing-library/react @testing-library/dom @types/react @types/react-dom @testing-library/jest-dom @testing-library/user-event
 ```
 
 ### Update jest.config.js file
