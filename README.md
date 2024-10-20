@@ -47,3 +47,46 @@ export default {
   setupFilesAfterEnv: ["@testing-library/jest-dom"],
 };
 ```
+
+# Setup storybook (v7)
+
+### Install dependencies
+
+```bash
+npx sb@7 init
+```
+
+### Interaction testing using Storybook (With jest)
+
+```bash
+npm i -D @storybook/jest
+```
+
+### Example
+
+```tsx
+import { Meta, StoryObj } from "@storybook/react";
+import Form from "./Form";
+import { userEvent, within } from "@storybook/testing-library";
+import { expect } from "@storybook/jest";
+
+const meta = {
+  title: "Form",
+  component: Form,
+} as Meta<typeof Form>;
+
+export default meta;
+
+type Story = StoryObj<typeof Form>;
+export const Default: Story = {};
+export const Testing: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByRole("textbox");
+
+    await expect(input).toHaveTextContent("");
+    await userEvent.type(input, "play function");
+    await expect(canvas.getByDisplayValue("play function")).toBeInTheDocument();
+  },
+};
+```
