@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { groupSchema } from "../../schema/group";
 
-// フォームで使用する変数の型を定義
+// Define the types of variables used in the form
 export interface formInputs {
   name: string;
   members: string;
@@ -21,7 +21,7 @@ interface CreateGroupFormProps {
 }
 
 const CreateGroupForm: React.FC<CreateGroupFormProps> = ({ onSubmit }) => {
-  // React Hook Formでバリデーションやフォームが送信されたときの処理などを書くために必要な
+  // React Hook Form. This is necessary to write validation and processing when the form is submitted.
   const {
     handleSubmit,
     register,
@@ -31,32 +31,30 @@ const CreateGroupForm: React.FC<CreateGroupFormProps> = ({ onSubmit }) => {
     resolver: zodResolver(groupSchema),
   });
 
-  // フォームが送信されたときの処理
+  // What to do when the form is submitted
   const onSubmitForm = handleSubmit(async (data) => {
     try {
       await onSubmit(data);
-      console.info("登録成功");
+      console.info("Registration successful");
       reset();
     } catch (e) {
       console.error(e);
-      window.alert("登録に失敗");
+      window.alert("Registration failed");
     }
   });
 
   return (
     <VStack maxW={"600px"}>
       <form onSubmit={onSubmitForm} style={{ width: "60%" }}>
-        {/* 名前 */}
         <FormControl mb={5} isInvalid={Boolean(errors.name)}>
-          <FormLabel htmlFor="name">グループ名</FormLabel>
+          <FormLabel htmlFor="name">Group Name</FormLabel>
           <Input id="name" placeholder="旅行" {...register("name")} />
           <FormErrorMessage>
             {errors.name && errors.name.message}
           </FormErrorMessage>
         </FormControl>
-        {/* メールアドレス */}
         <FormControl mb={10} isInvalid={Boolean(errors.members)}>
-          <FormLabel htmlFor="members">メンバー</FormLabel>
+          <FormLabel htmlFor="members">Members</FormLabel>
           <Input
             id="members"
             placeholder="太郎, 花子"
@@ -72,7 +70,7 @@ const CreateGroupForm: React.FC<CreateGroupFormProps> = ({ onSubmit }) => {
           type="submit"
           w={"full"}
         >
-          グループを作成
+          Create a group
         </Button>
       </form>
     </VStack>

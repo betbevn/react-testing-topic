@@ -96,3 +96,9 @@ export const Testing: Story = {
 ```bash
 npm i -D supertest @types/supertest
 ```
+
+# Mock Service Worker
+
+```bash
+npm i -D msw@1.3.2
+```

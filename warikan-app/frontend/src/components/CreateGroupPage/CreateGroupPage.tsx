@@ -18,7 +18,7 @@ const CreateGroupPage = () => {
       navigate(`/group/${data.name}`);
     } catch (err) {
       console.error(err);
-      throw new Error("グループの作成に失敗");
+      throw new Error("Group creation failed");
     }
   };
 

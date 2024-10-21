@@ -44,11 +44,11 @@ const CreateExpenseForm: React.FC<CreateExpenseFormProps> = ({
 
     try {
       await onSubmit(postData);
-      console.info("登録成功");
+      console.info("Registration successful");
       reset();
     } catch (e) {
       console.error(e);
-      window.alert("登録に失敗");
+      window.alert("Registration failed");
     }
   };
 
