@@ -9,14 +9,14 @@ export const calculateSettlements = (
     balance[member] = 0;
   });
 
-  // 支出をメンバーに分配
+  // Distribute expenses to members
   for (const expense of expenses) {
     const amountPerPerson = Math.floor(expense.amount / groupMembers.length);
     const remainder = expense.amount - amountPerPerson * groupMembers.length;
     for (const member of groupMembers) {
       balance[member] -= amountPerPerson;
     }
-    // 余りは支払い者が負担
+    // The rest is paid by the payer
     balance[expense.payer] -= remainder;
     balance[expense.payer] += expense.amount;
   }
@@ -26,7 +26,7 @@ export const calculateSettlements = (
   const debtors = Object.entries(balance).filter(([_, amount]) => amount < 0);
   const creditors = Object.entries(balance).filter(([_, amount]) => amount > 0);
 
-  // 分配した支出から清算リストを作成
+  // Create a settlement list from the distributed expenses
   for (let [debtor, debtorAmount] of debtors) {
     while (debtorAmount < 0) {
       for (let i = 0; i < creditors.length; i++) {

@@ -1,4 +1,4 @@
-# グループの作成
+# Creating groups
 POST http://localhost:3000/groups
 Content-Type: application/json
 
@@ -9,17 +9,17 @@ Content-Type: application/json
 
 ###
 
-# グループ一覧の取得
+# Get group list
 GET http://localhost:3000/groups
 
 ###
 
-# グループ名を指定してグループを取得
+# Get a group by specifying the group name
 GET http://localhost:3000/groups/テストグループ1
 
 ###
 
-# 支出の登録
+# Register expenses
 POST http://localhost:3000/expenses
 Content-Type: application/json
 
@@ -32,10 +32,10 @@ Content-Type: application/json
 
 ###
 
-# 清算リストの取得
+# Get liquidation list
 GET http://localhost:3000/settlements/テストグループ1
 
 ###
 
-# テストデータの初期化
+# Initialize test data
 GET http://localhost:3000/init

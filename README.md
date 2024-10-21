@@ -90,3 +90,9 @@ export const Testing: Story = {
   },
 };
 ```
+
+# Integration test for backend
+
+```bash
+npm i -D supertest @types/supertest
+```
