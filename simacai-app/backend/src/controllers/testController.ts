@@ -10,7 +10,7 @@ export class TestController {
     res: express.Response,
     next: express.NextFunction
   ) => {
-    // テストデータの初期化
+    // Initializing test data
     fs.writeFileSync(GROUP_FILE_PATH, JSON.stringify([]));
     fs.writeFileSync(EXPENSE_FILE_PATH, JSON.stringify([]));
 
