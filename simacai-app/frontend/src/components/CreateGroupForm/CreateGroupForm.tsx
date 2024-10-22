@@ -32,7 +32,7 @@ const CreateGroupForm: React.FC<CreateGroupFormProps> = ({ onSubmit }) => {
   });
 
   // What to do when the form is submitted
-  const onSubmitForm = handleSubmit(async (data) => {
+  const onSubmitForm = handleSubmit(async (data: formInputs) => {
     try {
       await onSubmit(data);
       console.info("Registration successful");
