@@ -1,1 +1,5 @@
-[{"name":"group1","members":["member1","member2","member3"]},{"name":"group2","members":["m1","m2","m3"]},{"name":"group3","members":["Ken","Bob"]}]
+[
+  { "name": "group1", "members": ["member1", "member2", "member3"] },
+  { "name": "group2", "members": ["m1", "m2", "m3"] },
+  { "name": "group3", "members": ["Ken", "Bob"] }
+]

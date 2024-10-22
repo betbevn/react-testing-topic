@@ -1,1 +1,8 @@
-[{"groupName":"group1","expenseName":"name1","payer":"member1","amount":1000}]
+[
+  {
+    "groupName": "group1",
+    "expenseName": "name1",
+    "payer": "member1",
+    "amount": 1000
+  }
+]
