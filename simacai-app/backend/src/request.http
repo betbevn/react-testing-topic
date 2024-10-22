@@ -3,8 +3,8 @@ POST http://localhost:3000/groups
 Content-Type: application/json
 
 {
-  "name": "テストグループ1",
-  "members": ["一郎", "二郎", "三郎"]
+  "name": "TestGroup1",
+  "members": ["m1", "m2", "m3"]
 }
 
 ###
@@ -15,7 +15,7 @@ GET http://localhost:3000/groups
 ###
 
 # Get a group by specifying the group name
-GET http://localhost:3000/groups/テストグループ1
+GET http://localhost:3000/groups/TestGroup1
 
 ###
 
@@ -24,16 +24,16 @@ POST http://localhost:3000/expenses
 Content-Type: application/json
 
 {
-  "groupName": "テストグループ1",
-	"expenseName": "ディナー",
-	"payer": "一郎",
+  "groupName": "TestGroup1",
+	"expenseName": "dinner",
+	"payer": "m1",
 	"amount": 10000
 }
 
 ###
 
 # Get liquidation list
-GET http://localhost:3000/settlements/テストグループ1
+GET http://localhost:3000/settlements/TestGroup1
 
 ###
 

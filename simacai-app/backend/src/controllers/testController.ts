@@ -14,6 +14,6 @@ export class TestController {
     fs.writeFileSync(GROUP_FILE_PATH, JSON.stringify([]));
     fs.writeFileSync(EXPENSE_FILE_PATH, JSON.stringify([]));
 
-    return res.status(200).send("テストファイルを初期化しました");
+    return res.status(200).send("I have initialized the test file");
   };
 }

@@ -76,7 +76,7 @@ describe("GroupController", () => {
       );
 
       expect(res.status).toHaveBeenCalledWith(400);
-      expect(res.send).toHaveBeenCalledWith(["メンバー名が重複しています"]);
+      expect(res.send).toHaveBeenCalledWith(["Duplicate member name"]);
     });
   });
 });

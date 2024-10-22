@@ -51,7 +51,7 @@ describe("Integration test", () => {
       const response = await request(app).post("/groups").send(group);
 
       expect(response.status).toBe(200);
-      expect(response.text).toBe("グループの作成が成功しました");
+      expect(response.text).toBe("Group creation successful");
     });
   });
 });

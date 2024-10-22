@@ -7,9 +7,9 @@ export const groupSchema = z
       (value) => (value as string).split(",").map((v) => v.trim()),
       z
         .array(z.string())
-        .min(2, "メンバーは2人以上必要です")
+        .min(2, "Two or more members are required")
         .refine((value) => value.length === new Set(value).size, {
-          message: "メンバー名が重複しています",
+          message: "Duplicate member name",
         })
     ),
   })

@@ -12,7 +12,7 @@ export class ExpenseService {
   getSettlements = (groupName: string): Settlement[] => {
     const group = this.groupService.getGroupByName(groupName);
     if (!group) {
-      throw new Error(`グループ： ${groupName} が存在しません`);
+      throw new Error(`Group: ${groupName} does not exist`);
     }
 
     const expenses = this.expenseRepository
@@ -24,11 +24,11 @@ export class ExpenseService {
   addExpense = (expense: Expense): void => {
     const group = this.groupService.getGroupByName(expense.groupName);
     if (!group) {
-      throw new Error(`グループ： ${expense.groupName} が存在しません`);
+      throw new Error(`Group: ${expense.groupName} does not exist`);
     }
 
     if (!group.members.includes(expense.payer)) {
-      throw new Error("支払い者がメンバーの中にいません");
+      throw new Error("The payer is not among the members");
     }
 
     this.expenseRepository.saveExpense(expense);

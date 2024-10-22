@@ -34,7 +34,7 @@ export class GroupController {
     } catch (e) {
       next(e);
     }
-  }
+  };
 
   addGroup = (
     req: express.Request,
@@ -52,7 +52,7 @@ export class GroupController {
       }
 
       this.groupService.addGroup({ name, members });
-      res.status(200).send("グループの作成が成功しました");
+      res.status(200).send("Group creation successful");
     } catch (e) {
       if (e instanceof ZodError) {
         const errorMessages = e.issues.map((e) => e.message);
@@ -60,5 +60,5 @@ export class GroupController {
       }
       next(e);
     }
-  }
+  };
 }

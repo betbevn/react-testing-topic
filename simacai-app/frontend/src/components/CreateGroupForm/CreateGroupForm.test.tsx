@@ -29,6 +29,8 @@ describe("CreateGroupForm", () => {
   test("invlaid data when submit form", async () => {
     await user.click(screen.getByRole("button"));
     expect(screen.getByText("Group name is required")).toBeInTheDocument();
-    expect(screen.getByText("メンバーは2人以上必要です")).toBeInTheDocument();
+    expect(
+      screen.getByText("Two or more members are required")
+    ).toBeInTheDocument();
   });
 });

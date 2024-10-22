@@ -37,7 +37,7 @@ export class ExpenseController {
         payer,
         amount: amount,
       });
-      res.status(200).send("支出が登録されました");
+      res.status(200).send("Expenses registered");
     } catch (e) {
       if (e instanceof ZodError) {
         const errorMessages = e.issues.map((e) => e.message);

@@ -25,7 +25,9 @@ test.describe("Integration test", () => {
       await submitButton.click();
 
       await expect(page.getByText("Group name is required")).toBeVisible();
-      await expect(page.getByText("メンバーは2人以上必要です")).toBeVisible();
+      await expect(
+        page.getByText("Two or more members are required")
+      ).toBeVisible();
       await expect(page).not.toHaveURL(/.+\/group\/group1/);
     });
   });

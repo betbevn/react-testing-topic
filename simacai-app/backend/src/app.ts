@@ -40,7 +40,7 @@ export function createApp(
       next: express.NextFunction
     ) => {
       console.error(err.message);
-      res.status(500).send("サーバー内部でエラーが発生しました");
+      res.status(500).send("An internal error occurred on the server");
     }
   );
 
