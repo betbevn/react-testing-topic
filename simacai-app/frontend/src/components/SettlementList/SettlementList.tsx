@@ -15,7 +15,7 @@ interface SettlementListProps {
 const SettlementList: React.FC<SettlementListProps> = ({ settlements }) => {
   return (
     <VStack align={"start"} w={"60%"} maxW={"600px"}>
-      <Text borderBottom={"1px"}>清算方法</Text>
+      <Text borderBottom={"1px"}>Payment method</Text>
       <UnorderedList spacing={"2"}>
         {settlements.map((split, index) => (
           <ListItem key={index} w={"300px"}>

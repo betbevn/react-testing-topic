@@ -8,7 +8,7 @@ exports[`SettlementList  1`] = `
     <p
       class="chakra-text css-x39wmu"
     >
-      清算方法
+      Payment method
     </p>
     <ul
       class="css-1s6xsev"
