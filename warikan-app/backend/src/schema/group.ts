@@ -2,7 +2,7 @@ import { z } from "zod";
 
 export const groupSchema = z
   .object({
-    name: z.string().min(1, "グループ名は必須です"),
+    name: z.string().min(1, "Group name is required"),
     members: z
       .array(z.string())
       .min(2, "メンバーは2人以上必要です")

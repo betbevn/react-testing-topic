@@ -57,20 +57,20 @@ const CreateExpenseForm: React.FC<CreateExpenseFormProps> = ({
       <form onSubmit={handleSubmit(onSubmitFrom)} style={{ width: "60%" }}>
         <VStack>
           <FormControl mb={5} isInvalid={Boolean(errors.expenseName)}>
-            <FormLabel>支出名</FormLabel>
+            <FormLabel>Expense Name</FormLabel>
             <Input type="text" {...register("expenseName")} />
             <FormErrorMessage>
               {errors.expenseName && errors.expenseName.message}
             </FormErrorMessage>
           </FormControl>
           <FormControl mb={5} isInvalid={Boolean(errors.amount)}>
-            <FormLabel>金額</FormLabel>
+            <FormLabel>Amount</FormLabel>
             <Input type="number" {...register("amount")} />
             <FormErrorMessage>{errors.amount?.message}</FormErrorMessage>
           </FormControl>
           <FormControl mb={5} isInvalid={Boolean(errors.payer)}>
-            <FormLabel>支払うメンバー</FormLabel>
-            <Select placeholder="選択してください" {...register("payer")}>
+            <FormLabel>Paying Member</FormLabel>
+            <Select placeholder="please select" {...register("payer")}>
               {group.members.map((member) => (
                 <option value={member} key={member}>
                   {member}
@@ -86,7 +86,7 @@ const CreateExpenseForm: React.FC<CreateExpenseFormProps> = ({
             w={"full"}
             m={5}
           >
-            支出を登録
+            Register your expenses
           </Button>
         </VStack>
       </form>

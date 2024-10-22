@@ -11,7 +11,7 @@ const CreateGroupPage = () => {
     `${import.meta.env.VITE_API_BASE_URL}/groups`
   );
 
-  // フォームが送信されたときの処理
+  // What to do when the form is submitted
   const onSubmit = async (data: formInputs) => {
     try {
       await postGroup(data, `${import.meta.env.VITE_API_BASE_URL}/groups`);

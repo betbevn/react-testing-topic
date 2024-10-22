@@ -48,7 +48,7 @@ const CreateGroupForm: React.FC<CreateGroupFormProps> = ({ onSubmit }) => {
       <form onSubmit={onSubmitForm} style={{ width: "60%" }}>
         <FormControl mb={5} isInvalid={Boolean(errors.name)}>
           <FormLabel htmlFor="name">Group Name</FormLabel>
-          <Input id="name" placeholder="旅行" {...register("name")} />
+          <Input id="name" placeholder="trip" {...register("name")} />
           <FormErrorMessage>
             {errors.name && errors.name.message}
           </FormErrorMessage>
@@ -57,7 +57,7 @@ const CreateGroupForm: React.FC<CreateGroupFormProps> = ({ onSubmit }) => {
           <FormLabel htmlFor="members">Members</FormLabel>
           <Input
             id="members"
-            placeholder="太郎, 花子"
+            placeholder="Taro, Hanako"
             {...register("members")}
           />
           <FormErrorMessage>

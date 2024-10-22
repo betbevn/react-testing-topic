@@ -102,3 +102,35 @@ npm i -D supertest @types/supertest
 ```bash
 npm i -D msw@1.3.2
 ```
+
+# Playwright (E2E testing)
+
+```bash
+npm init playwright@latest
+```
+
+### Run tests in headed mode
+
+```bash
+npm run playwright -- --headed
+```
+
+### Run a demo
+
+Start FE
+
+```bash
+npm run dev
+```
+
+Start BE
+
+```bash
+npm run start:e2e
+```
+
+Run playwright UI
+
+```bash
+npm run playwright:ui
+```

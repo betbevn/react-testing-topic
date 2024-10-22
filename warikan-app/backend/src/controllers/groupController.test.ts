@@ -58,7 +58,7 @@ describe("GroupController", () => {
       );
 
       expect(res.status).toHaveBeenCalledWith(400);
-      expect(res.send).toHaveBeenCalledWith(["グループ名は必須です"]);
+      expect(res.send).toHaveBeenCalledWith(["Group name is required"]);
     });
 
     test("invalid group: duplicate member name", () => {
