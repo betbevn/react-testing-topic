@@ -1,4 +1,4 @@
-**_Examples for Jest, React Testing Library, Storybook, and Playwright._**
+**_Examples for Jest, React Testing Library, Storybook, Chromatic and Playwright._**
 
 # Setup jest
 
