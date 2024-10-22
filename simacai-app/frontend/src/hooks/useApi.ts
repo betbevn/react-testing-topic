@@ -10,7 +10,7 @@ export const useApi = <T>(url: string) => {
       const response = await axios.get(url);
       setData(response.data);
     } catch (err) {
-      setError("エラーが発生しました");
+      setError("An error has occurred");
     }
   }, [url]);
 
@@ -25,7 +25,7 @@ export const useApi = <T>(url: string) => {
         },
       });
     } catch (err) {
-      setError("エラーが発生しました");
+      setError("An error has occurred");
     }
   };
 

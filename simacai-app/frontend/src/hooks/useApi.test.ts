@@ -32,7 +32,7 @@ describe("useApi", () => {
       const { result } = renderHook(() => useApi(url));
 
       await waitFor(() =>
-        expect(result.current.error).toBe("エラーが発生しました")
+        expect(result.current.error).toBe("An error has occurred")
       );
     });
   });
@@ -63,7 +63,7 @@ describe("useApi", () => {
       });
 
       await waitFor(() =>
-        expect(result.current.error).toBe("エラーが発生しました")
+        expect(result.current.error).toBe("An error has occurred")
       );
     });
   });
