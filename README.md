@@ -119,20 +119,17 @@ npm run playwright -- --headed
 
 ### Run a demo
 
-Start FE
-
-```bash
-npm run dev
-```
-
 Start BE
 
 ```bash
+cd simacai-app/backend/
 npm run start:e2e
 ```
 
-Run playwright UI
+Start FE
 
 ```bash
+cd simacai-app/frontend/
+npm run dev
 npm run playwright:ui
 ```
