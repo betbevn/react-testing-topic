@@ -28,7 +28,7 @@ export class GroupController {
     try {
       const group = this.groupService.getGroupByName(req.params.name);
       if (!group) {
-        return res.status(404).send("グループが存在しません");
+        return res.status(404).send("Group does not exist");
       }
       res.status(200).json(group);
     } catch (e) {
@@ -48,7 +48,9 @@ export class GroupController {
 
       const groups = this.groupService.getGroups();
       if (groups.map((g) => g.name).includes(name)) {
-        return res.status(400).send("同じ名前のグループが登録されています");
+        return res
+          .status(400)
+          .send("A group with the same name is registered.");
       }
 
       this.groupService.addGroup({ name, members });
