@@ -8,7 +8,7 @@ export const expenseSchema = z
     amount: z.coerce
       .number()
       .int()
-      .min(1, "The amount must be an integer of 1 yen or more."),
+      .min(1, "The amount must be an integer of 1 $ or more."),
   })
   .strict();
 

@@ -57,7 +57,7 @@ test.describe("Integration test", () => {
       await submitButton.click();
 
       await expect(page).toHaveURL(/.+\/group\/group1/);
-      await expect(page.getByRole("list")).toHaveText("m2 → m1500円");
+      await expect(page.getByRole("list")).toHaveText("m2 → m1500$");
     });
 
     test("If there is a validation error, the expenditure is not registered and the reimbursement list is not updated.", async ({
@@ -68,7 +68,7 @@ test.describe("Integration test", () => {
 
       await expect(page.getByText("Expense name is required")).toBeVisible();
       await expect(
-        page.getByText("The amount must be an integer of 1 yen or more.")
+        page.getByText("The amount must be an integer of 1 $ or more.")
       ).toBeVisible();
       await expect(page.getByText("Paying members are required")).toBeVisible();
 

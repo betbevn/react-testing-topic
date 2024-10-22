@@ -1,8 +1,1 @@
-[
-  {
-    "groupName": "group1",
-    "expenseName": "lunch",
-    "payer": "m1",
-    "amount": 1000
-  }
-]
+[{"groupName":"group1","expenseName":"lunch","payer":"m1","amount":1000},{"groupName":"dfgsrgd","expenseName":"h2","payer":"m5","amount":1000}]

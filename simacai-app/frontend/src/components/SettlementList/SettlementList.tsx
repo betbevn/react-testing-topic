@@ -23,7 +23,7 @@ const SettlementList: React.FC<SettlementListProps> = ({ settlements }) => {
               <Box>
                 {split.from} → {split.to}
               </Box>
-              <Box>{split.amount}円</Box>
+              <Box>{split.amount}$</Box>
             </HStack>
           </ListItem>
         ))}

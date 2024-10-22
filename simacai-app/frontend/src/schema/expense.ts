@@ -6,7 +6,7 @@ export const expenseSchema = z
     payer: z.string().min(1, "Paying members are required"),
     amount: z.preprocess(
       (v) => Number(v),
-      z.number().int().min(1, "The amount must be an integer of 1 yen or more.")
+      z.number().int().min(1, "The amount must be an integer of 1 $ or more.")
     ),
   })
   .strict();
